@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <title>Codemirror </title>
+     
+    <link rel='stylesheet' type='text/css' href='lib/codemirror.css' />
+    
+    <script type='text/javascript' src='lib/angular.js'></script>
+    <script type='text/javascript' src='lib/codemirror.js'></script>
+    <script type='text/javascript' src='lib/ui-codemirror.js'></script>
+    <script type='text/javascript' src='lib/yaml.js'></script>
+    <script type='text/javascript' src='app.js'></script>
+    
+    <style>
+
+body {
+    background-color: #F4F4F4;
+}
+
+#content {
+    background-color: #FFFFFF;
+    width: 940px;
+    margin: 0px auto;
+    min-height: 400px;
+}
+     </style>
+</head>
+<body ng-app='YamlAutocomplete'>
+     <div id='content' ng-controller='MainController'>
+     	<h1>YAML autocomplete demo</h1>
+     	<div ui-codemirror ui-codemirror-opts="editorOptions" ng-model='content'></div>
+     </div>
+
+</body>
+</html>
