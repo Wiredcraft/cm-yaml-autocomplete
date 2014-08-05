@@ -7,7 +7,7 @@ angular.module('YamlAutocomplete',[
     var codemirrorLoaded = function(_editor){
         // autofocus: true options doesn't seem to take effect
         _editor.focus();
-    };lib/codemirror.js
+    };
 
     $scope.content = yaml_content;
 
