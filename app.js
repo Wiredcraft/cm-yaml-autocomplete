@@ -5,6 +5,7 @@ angular.module('YamlAutocomplete',[
 .controller('MainController', ['$scope', 'yaml_content', function($scope, yaml_content){
 
     var codemirrorLoaded = function(_editor){
+        // autofocus: true options doesn't seem to take effect
         _editor.focus();
     };
 
@@ -15,10 +16,7 @@ angular.module('YamlAutocomplete',[
         lineNumbers : false,
         mode: 'yaml',
         onLoad: codemirrorLoaded,
-        extraKeys: { 'Tab': function(cm){
-                cm.replaceSelection('    ' , 'end');
-            }
-        }
+        tabSize: 2
     };
 }])
 
@@ -36,7 +34,5 @@ services:
   php: '*'
 */
 
-  return "configuration: {}\nname: 'web7'\nprovider:\n  image: 'ubuntu12.04'\n  name: 'digitalocean'\n  region: '3'\n  size: '66'\nservices:\n  nginx: '*'\n  php: '*'\n"
-}])
-
-;
+  return "configuration: {}\nname: 'web7'\nprovider:\n  image: 'ubuntu12.04'\n  name: 'digitalocean'\n  region: '3'\n  size: '66'\nservices:\n  nginx: '*'\n  php: '*'\n";
+}]);
